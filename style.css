@@ -3,3 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: url(./img/pawel-czerwinski-KWpm9MmEo2s-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
