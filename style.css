@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Norse';
+    src: url(./fonts/Norse-Bold.otf);
+    font-weight: bold;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +11,10 @@
 }
 
 :root {
-    --theme-color: rgb(87, 174, 210);
+    --theme-color: rgb(38, 81, 99);
+    --bright-theme-color: rgb(91, 187, 228);
+    --theme-text-color: #eee;
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 12px;
 }
 
@@ -42,36 +51,89 @@ form li {
     filter: blur(1px);
 }
 
+.left-side {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bg-credits {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    padding: 3rem;
+    justify-content: center;
+    color: var(--theme-text-color);
+    background-color: #111a;
+    font-weight: bold;
+    gap: 0.5ch;
+}
+
+.bg-credits>a {
+    text-decoration: none;
+    color: var(--bright-theme-color);
+}
+
+.bg-credits>a:visited {
+    text-decoration: none;
+    color: var(--bright-theme-color);
+}
+
+.odin-splash {
+    margin-top: 10rem;
+    padding: 2rem;
+    background: #1118;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 4ch;
+}
+
+.odin-splash img {
+    height: 10rem;
+}
+
+.odin-splash div {
+    font-size: 8rem;
+    font-family: 'Norse';
+    font-weight: bold;
+    color: white;
+}
+
 .form-container {
+    font-family: var(--system-ui);
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding: 3rem;
     margin-left: auto;
-    width: 60%;
+    height: 100%;
+    width: 55%;
     background: #fafafa;
     box-shadow: 0px 0px 10px 0px #111 ; 
 }
 
 .form-container p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bolder;
 }
 
 .form-container p:first-of-type {
-    margin-top: 8rem;
+    margin-top: 3rem;
 }
 
 .form-container p:last-of-type {
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
-form {
-    height: 40%;
+fieldset {
+    border: hidden;
+    border-radius: 1rem;
     margin: 0 -3rem;
     padding: 3rem;
     background: #fff;
-    box-shadow: 0px 2px 7px 0px #666;
+    box-shadow: 0px 2px 7px 0px #999;
 }
 
 form ul {
@@ -82,12 +144,57 @@ form ul {
 
 form li {
     display: flex;
-    gap: 5%;
+    gap: 8ch;
 
 }
 
+form button {
+    background: var(--theme-color);
+    color: var(--theme-text-color);
+    height: 4rem;
+    width: 20%;
+    border: hidden;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    box-shadow: 0px 0px 5px 0px #777;
+}
+
+.sign-in {
+    display: flex;
+    font-style: italic;
+    font-size: 1.16rem;
+    gap: 1ch;
+}
+
+.sign-in>a {
+    display: flex;
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
 .input-container {
-    width: 45%;
+    width: 40ch;
     display: flex;
     flex-direction: column;
+}
+
+label {
+    color: #444;
+    font-size: 0.8rem;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+input:focus {
+    border: 2px solid var(--theme-color);
+    box-shadow: 0px 0px 6px 0px #ddd;
+}
+
+input:invalid {
+    border: 2px solid #f66;
+    box-shadow: 0px 0px 6px 0px #ddd;
 }
